@@ -1,0 +1,23 @@
+// #include <stdio.h>
+
+// int main() {
+//     int i=0,arr[]={1,2,3,4,5};
+//     for (i=0;i<5;i++){
+//         printf("%d\n",arr[i]);
+//     }
+// }
+// #include <stdio.h>
+// int main() {
+//     int i = 0, arr[] = {1, 2, 3, 4, 5}, s = 0;
+//     for (i = 0; i < 5; i++) {
+//         s = s + arr[i];
+//         printf("%d ", s); // Added newline character
+//     }
+// }
+// #include <stdio.h>
+// int main() {
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int *a=arr;//a stores the arr address 
+//     printf("%d\n %d\n",*a,*a++,);//here *a means acessing value stored on a's address
+    
+// }
