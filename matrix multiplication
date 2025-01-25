@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    int c[3][3] = {0}; // Initialize the result matrix to zero
+    int a[3][3] = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+    int b[3][3] = {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+    int i, j, k;
+
+    // Matrix multiplication
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            for (k = 0; k < 3; k++) {
+                c[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+    // Print the product matrix
+    printf("Product:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", c[i][j]);
+        }
+        printf("\n");
+    }
+
+}
