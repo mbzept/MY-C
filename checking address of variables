@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() 
+{
+    int n=72;
+    int *a=&n;
+    printf("%p  %p",a,&n);//chrcking address of variables
+    
+}
