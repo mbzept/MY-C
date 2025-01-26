@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() 
+{
+    int n,i=1,pro=1;
+    printf("number=");
+    scanf("%d",&n);
+    for(i;i<=n;i++){
+        pro=pro*i;
+    }
+    printf("factorial:%ld",pro);
+}
