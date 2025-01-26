@@ -1,0 +1,29 @@
+#include <stdio.h>
+int sum(int,int);
+int sum(int a,int b){
+    printf("%d+%d=%d",a,b,a+b);
+}
+int sub(int,int);
+int sub(int a,int b){
+    printf("%d-%d=%d",a,b,a-b);
+}
+int pro(int,int);
+int pro(int a,int b){
+    printf("%d*%d=%d",a,b,a*b);
+}
+int div(int,int);
+int div(int a,int b){
+    printf("%d/%d=%u",a,b,a/b);
+}
+int main() 
+{
+    int a,b;
+    printf("a="),scanf("%d",&a),printf("b="),scanf("%d",&b);
+    sum(a,b);
+    printf("\n");
+    sub(a,b);
+    printf("\n");
+    pro(a,b);
+    printf("\n");
+    div(a,b);
+}
