@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+        /* #using strlen()
+        srstr(word5,"Pro")---{to access the index value or address of a word within a word}
+        strchr(word5,'m')--->{stores the address of 'n' and to print value use pointers}
+        #strncpy(word3,word4,3)---->{copies 3 character from one array to another}
+        #strcmp()---->{if both words equal returns 0 if not equal returns any value}
+        #using strcat(word1,word2)---->{to concatinate or add two words and stores in first word}
+        #using strcpy(new , old )----->{ copying strings of array}
+        #accessing array words
+        #accessing letters of words 
+        */
+int main() {
+    char a[40]="character";
+    char b[4][20]={"Akash","Ram","Vikas","Prem"};
+    char d[]="hii",e[]="Anshuman";
+    char c[20];
+    printf("%c\n",a[3]);
+    printf("%s\n",a);
+    for (int i=0;i<4;i++){
+        printf("index [%d] has name '%s' \n",i,b[i]);
+    }
+    printf("length of word 'character' is %d \n",strlen(a));
+
+    printf("finally '%s' is copied in array c[] \n",strcpy(c,a));
+
+    printf("%s \n",strcat(d,e));
+
+    char word1[]="aaaa",word2[]="aaaa";
+    int g;
+    g=strcmp(word1,word2);
+    if (g==0){
+        printf("words are equal and value %d\n",g);
+    }
+    else{
+        printf("words are not equal\n");
+    }
+
+    char word3[100],word4[]="Anshuman";
+    printf("three characters are copied :%s\n",strncpy(word3,word4,3));
+
+    char word5[]="C Programming";
+    printf("Address of m :%d character:%c position;%d\n",strchr(word5,'m'),*strchr(word5,'m'),strchr(word5,'m')-word5);
+
+    printf("position of 'Pro: %d\n",strstr(word5,"Pro")-word5);
+}
