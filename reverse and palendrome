@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // logic 1 to reverse string using strlen
+    int i;
+    char b[30];
+    printf("enter string:");scanf("%[^\n]s",b);
+    for (i=strlen(b);i>=0;i--){
+        printf("%c",b[i]);
+    }
+    printf("\n");
+
+
+    // logic 2 to reverse string using for and swap method
+    int first,last,temp,len;
+    len=strlen(b);
+    first=0;
+    last=len-1;
+    for (i=0;i<len/2;i++){
+        temp=b[first];
+        b[first]=b[last];
+        b[last]=temp;
+        first++;
+        last--;
+    }
+    printf("second logic output :%s\n",b);
+
+// check if number is palendrome
+    int flag;
+    for (i=0;i<len/2;i++){
+        first++;
+        last--;   
+    }
+    if (b[first]!=b[last]){
+            printf("not palendrome\n");
+        }
+        else{
+            printf("palendrome\n");
+        }
+}
