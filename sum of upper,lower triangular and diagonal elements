@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+    //sum of upper triangular elements
+   int  sum1=0,sum2=0,sum3=0,a[3][3]={{1,2,3},{4,5,6},{7,8,9}},i,j;
+   for (i=0;i<3;i++){
+    for (j=0;j<3;j++){
+        if (i<j){
+            sum1+=a[i][j];
+            
+        }
+        if (i>j){
+            sum2+=a[i][j];
+        }
+        if (i==j){
+            sum3+=a[i][j];
+
+        }
+    }
+   }
+   printf("sum of upper triangular elements is %d\n",sum1);
+    //sum of lower triangular elements
+    printf("sum of lower triangular elements is %d\n",sum2);
+// sum of diagonals elements 
+    printf("sum of diagonals elements is %d\n",sum3);
+
+
+}
