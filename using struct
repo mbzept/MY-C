@@ -1,0 +1,16 @@
+#include <stdio.h>
+// using struct
+struct stu_info{//NOTE:: 'std_info' is data type not name
+    char name[20];
+    int id;
+    char branch[10];
+    float cgpa;
+};
+int main()
+{
+    printf("******using struct we stored two student's data********\n");
+    struct stu_info s1={"Ajay",101,"AI",8.5};
+    printf("name:%s\nid:%d\nbranch:%s\ncgpa:%f\n\n",s1.name,s1.id,s1.branch,s1.cgpa);
+    struct stu_info s2={"Chittansh",102,"AI",9.5};
+    printf("name:%s\nid:%d\nbranch:%s\ncgpa:%f\n",s2.name,s2.id,s2.branch,s2.cgpa);
+}
