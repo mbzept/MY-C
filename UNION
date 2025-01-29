@@ -1,0 +1,15 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+union stu{
+    int id;
+    float marks;
+    char name[20];
+};
+int main() {
+    union stu a;
+    a.id=101;
+    a.marks=75;
+    printf("id: %d\n",a.id);//
+    printf("no value will be accessed b/c compiler is using max length address of float name of size 20 that's why output is garbage value.if u access the name the output will be corrected for sure.");
+    
+}
