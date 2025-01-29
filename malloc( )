@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+//malloc(5*sizeof(int)) or calloc(5,sizeof(int))----- both are same
+struct stu_info{
+    int id;
+    char name[20];
+    float cgpa;
+};
+int main() {
+    struct stu_info *s1;
+    s1=(struct stu_info*)malloc(sizeof(struct stu_info));
+    s1->id=100;
+    strcpy(s1->name, "Anshuman");
+    s1->cgpa=9.5;
+    printf("S_id:[%d]\nS_name:[%s]\nS_cgpa:[%d]",s1->id,s1->name,s1->cgpa);
+}
