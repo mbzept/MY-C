@@ -1,0 +1,40 @@
+//storing user input number in a number.txt file and seperating even and odd numbers in even.txt and odd.txt file 
+#include <stdio.h>
+int main() {
+    FILE *numberFILE, *evenFILE, *oddFILE;
+    int n;
+    printf("How many numbers (up to 50): ");
+    scanf("%d", &n);
+    if (n > 50) {
+        printf("Number of inputs exceeds the limit of 50.\n");
+    }
+    int numbers[50], i;
+    numberFILE = fopen("number.txt", "w");
+    if (numberFILE == NULL) {
+        printf("Error opening number.txt\n");
+    }
+    printf("Enter %d numbers: \n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+        fprintf(numberFILE, "%d\t", numbers[i]);
+    }
+    fclose(numberFILE);
+    evenFILE = fopen("even.txt", "w");
+    if (evenFILE == NULL) {
+        printf("Error opening even.txt\n");
+    }
+    oddFILE = fopen("odd.txt", "w");
+    if (oddFILE == NULL) {
+        printf("Error opening odd.txt\n");
+        fclose(evenFILE);
+    }
+    for (i = 0; i < n; i++) {
+        if (numbers[i] % 2 == 0) {
+            fprintf(evenFILE, "%d\t", numbers[i]);
+        } else {
+            fprintf(oddFILE, "%d\t", numbers[i]);
+        }
+    }
+    fclose(evenFILE);  // Close the even file after writing
+    fclose(oddFILE);   // Close the odd file after writing
+}
