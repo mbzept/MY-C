@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define pi 3.14
+#define square(x) (x*x)
+#define area(x) (pi*x*x)
+int main() {
+    int a,b;
+    printf("to find area,square\n");
+    printf("enter number:");
+    scanf("%d",&a);
+    printf("enter radius:");
+    scanf("%d",&b);
+    printf("PI is %f\n",pi);
+    printf("SQUARE value is %d\n",square(a));
+    printf("AREA value is %f\n",area(b));
+
+}
